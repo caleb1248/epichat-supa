@@ -1,22 +1,23 @@
 <script lang="ts">
-	import { Auth } from '@supabase/auth-ui-svelte';
-	import { ThemeSupa } from '@supabase/auth-ui-shared';
-
 	export let data;
+
+	let email: string;
+	let password: string;
 </script>
 
-<svelte:head>
-	<title>User Management</title>
-</svelte:head>
+<main>
+	<h1>Login</h1>
+	<input bind:value={email} />
+	<input type="password" bind:value={password} />
+</main>
 
-<div class="row flex-center flex">
-	<div class="col-6 form-widget">
-		<Auth
-			supabaseClient={data.supabase}
-			view="sign_in"
-			redirectTo={`${data.url}/auth/callback`}
-			appearance={{ theme: ThemeSupa, style: { input: 'color: #fff' } }}
-			theme="dark"
-		/>
-	</div>
-</div>
+<style>
+	main {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+</style>

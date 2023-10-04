@@ -3,7 +3,7 @@
 }
 
 :root {
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 html,
@@ -17,8 +17,24 @@ body {
 	font-family: 'Courier New', Courier, monospace;
 }
 
+div#page-container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #111;
+}
+
 .top-navbar {
-	padding: 1rem;
+	padding: 1.5rem;
+	padding-right: 2rem;
 	display: flex;
 	justify-content: space-between;
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
 }
